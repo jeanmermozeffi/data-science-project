@@ -16,6 +16,5 @@ def calculate_student_average(student_grades):
     """
     if not student_grades:
         return 0
-    
-    print(f"Calculating average for student with grades: {student_grades}")
+
     return sum(student_grades) / len(student_grades)
