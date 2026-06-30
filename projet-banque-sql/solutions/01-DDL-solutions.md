@@ -82,9 +82,15 @@ ALTER TABLE succursales
     ADD CONSTRAINT chk_nom_non_vide CHECK (length(nom) > 0);
 ```
 
-**9.** `ALTER TABLE succursales RENAME COLUMN telephone TO tel_fixe;`
+**9.** 
+```sql
+ALTER TABLE succursales RENAME COLUMN telephone TO tel_fixe;
+```
 
-**10.** `ALTER TABLE succursales DROP COLUMN tel_fixe;`
+**10.** 
+```sql
+ALTER TABLE succursales DROP COLUMN tel_fixe;
+```
 
 ---
 

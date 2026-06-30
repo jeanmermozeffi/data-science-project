@@ -9,7 +9,7 @@
 --  Volumes : clients 250 · comptes 350 · cartes 280 · transactions 8000 ...
 -- ============================================================================
 
-SET search_path TO banque, public;
+SET search_path TO banque;
 
 -- Graine de hasard fixe → données identiques à chaque exécution du script
 SELECT setseed(0.4242);
