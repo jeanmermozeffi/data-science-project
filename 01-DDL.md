@@ -1,4 +1,4 @@
-```markdown
+
 # 🗄️ Data Definition Language (DDL) — Cours Bootcamp Data Science
 
 ---
