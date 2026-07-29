@@ -1,0 +1,1 @@
+Si vous me donnez plus de détails, je pourrai vous orienter plus précisément :Souhaitez-vous récupérer du code ou tester un pipeline CI/CD ?Rencontrez-vous une erreur spécifique ?Je pourrai ainsi vous proposer les commandes exactes.
