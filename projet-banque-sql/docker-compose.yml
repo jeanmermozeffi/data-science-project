@@ -1,0 +1,66 @@
+# ============================================================================
+#  FinBank CI — Stack pédagogique SQL (PostgreSQL + pgAdmin)
+#  Projet d'apprentissage : DDL · DML · DQL · DCL · TCL
+# ============================================================================
+#  Démarrage :   docker compose up -d
+#  pgAdmin   :   http://localhost:${PGADMIN_PORT:-8088}
+#  Arrêt     :   docker compose down            (les données persistent)
+#  Reset     :   docker compose down -v          (SUPPRIME les données)
+# ============================================================================
+
+services:
+    # --------------------------------------------------------------------------
+    #  Base de données PostgreSQL
+    # --------------------------------------------------------------------------
+    postgres:
+        image: postgres:16-alpine
+        container_name: finbank_postgres
+        restart: unless-stopped
+        ports:
+            - "${POSTGRES_PORT:-5432}:5432"
+        environment:
+            POSTGRES_USER: ${POSTGRES_USER:-admin}
+            POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-admin}
+            POSTGRES_DB: ${POSTGRES_DB:-finbank}
+            # Langue/locale pour les messages et le tri (français)
+            LANG: fr_FR.utf8
+        volumes:
+            - finbank_pgdata:/var/lib/postgresql/data
+            # ⚠️ Contrairement à Azure SQL Edge, PostgreSQL exécute AUTOMATIQUEMENT
+            #    tous les .sql de /docker-entrypoint-initdb.d au PREMIER démarrage,
+            #    dans l'ordre alphabétique. C'est notre initialisation clé en main.
+            - ./sql:/docker-entrypoint-initdb.d:ro
+        healthcheck:
+            test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-admin} -d ${POSTGRES_DB:-finbank}"]
+            interval: 10s
+            timeout: 5s
+            retries: 10
+            start_period: 20s
+
+    # --------------------------------------------------------------------------
+    #  pgAdmin — interface web d'administration
+    # --------------------------------------------------------------------------
+    pgadmin:
+        image: dpage/pgadmin4:latest
+        container_name: finbank_pgadmin
+        restart: unless-stopped
+        ports:
+            - "${PGADMIN_PORT:-8088}:80"
+        environment:
+            PGADMIN_DEFAULT_EMAIL: ${PGADMIN_EMAIL:-admin@finbank.ci}
+            PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_PASSWORD:-admin}
+            PGADMIN_CONFIG_SERVER_MODE: "False"
+            PGADMIN_CONFIG_MASTER_PASSWORD_REQUIRED: "False"
+        volumes:
+            - finbank_pgadmin:/var/lib/pgadmin
+            # Pré-enregistre la connexion au serveur PostgreSQL (plus rien à saisir)
+            - ./pgadmin/servers.json:/pgadmin4/servers.json:ro
+        depends_on:
+            postgres:
+                condition: service_healthy
+
+volumes:
+    finbank_pgdata:
+        name: finbank_pgdata
+    finbank_pgadmin:
+        name: finbank_pgadmin

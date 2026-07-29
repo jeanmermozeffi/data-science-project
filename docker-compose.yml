@@ -1,0 +1,41 @@
+services:
+    sqledge:
+        image: mcr.microsoft.com/azure-sql-edge:latest
+        container_name: sqledge
+        platform: linux/arm64
+        restart: unless-stopped
+        ports:
+            - "${SQL_PORT:-1433}:1433"
+        environment:
+            ACCEPT_EULA: "1"
+            MSSQL_SA_PASSWORD: ${MSSQL_SA_PASSWORD}
+            MSSQL_PID: Developer
+        volumes:
+            - sqledge_data:/var/opt/mssql
+            - ./init:/docker-entrypoint-initdb.d:ro
+        healthcheck:
+            test:
+              [
+                  "CMD-SHELL",
+                  "python3 -c \"import socket; s=socket.socket(); s.settimeout(5); s.connect(('localhost', 1433)); s.close()\" || exit 1",
+              ]
+            interval: 15s
+            timeout: 10s
+            retries: 10
+            start_period: 60s
+
+    adminer:
+        image: adminer:latest
+        container_name: adminer
+        restart: unless-stopped
+        ports:
+            - "${ADMINER_PORT:-8080}:8080"
+        depends_on:
+            sqledge:
+                condition: service_healthy
+        environment:
+            ADMINER_DEFAULT_SERVER: sqledge
+
+volumes:
+    sqledge_data:
+        name: sqledge_data

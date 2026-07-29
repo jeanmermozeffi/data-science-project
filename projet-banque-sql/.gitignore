@@ -1,0 +1,5 @@
+# Variables d'environnement (contient les mots de passe locaux)
+.env
+
+# Données pgAdmin éventuellement exportées en local
+pgadmin/sessions/
