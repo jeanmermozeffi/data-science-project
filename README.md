@@ -18,14 +18,12 @@ Repo instructeur — le repo apprenant est [data-scientist-bootcamp-2026-05](htt
 03-data-science/
 ├── cours/                # NumPy, Pandas, Exploration, Visualisation, Web Scraping
 ├── notebooks/            # Notebooks interactifs
-└── TP/                   # Data Cleaning (Employés)
+└── TP/                   # Data Cleaning (Employés) + web-scraping (exercice HTML/CSS)
 
 04-machine-learning/
 ├── cours/                # Algorithmes ML, Checkpoint Iris
 ├── notebooks/            # Notebooks interactifs
-└── TP/                   # TP Loyer, Crédit, Churn, Facture
-
-05-web-scraping/          # Exercice pratique HTML/CSS
+└── TP/                   # TP1 Loyer, TP2 Crédit, TP3 Churn, TP4 Facture (énoncés + guides corrigés + notebooks)
 
 data/                     # Jeux de données partagés (CSV)
 checkpoint/               # Corrections des checkpoints
