@@ -21,7 +21,7 @@ Repo instructeur — le repo apprenant est [data-scientist-bootcamp-2026-05](htt
 └── TP/                   # Data Cleaning (Employés) + web-scraping (exercice HTML/CSS)
 
 04-machine-learning/
-├── cours/                # Algorithmes ML, Checkpoint Iris
+├── cours/                # Algorithmes ML, Checkpoint Iris, Train/Test & Validation croisée, Métriques d'évaluation
 ├── notebooks/            # Notebooks interactifs
 └── TP/                   # TP1 Loyer, TP2 Crédit, TP3 Churn, TP4 Facture (énoncés + guides corrigés + notebooks)
 
