@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 326" width="940" height="326" font-family="Helvetica, Arial, sans-serif">
+<rect width="940" height="326" rx="14" fill="#FFFFFF"/>
+<defs>
+<marker id="f" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2563EB"/></marker>
+<marker id="bk" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#EA580C"/></marker>
+</defs>
+<rect x="40" y="120" width="150" height="70" rx="10" fill="#FFFFFF" stroke="#2563EB" stroke-width="2.5"/>
+<text x="115.0" y="147.0" font-size="14" fill="#2563EB" text-anchor="middle" font-weight="bold">Entrées</text>
+<text x="115.0" y="172.0" font-size="13" fill="#1F2937" text-anchor="middle" font-weight="normal">X</text>
+<rect x="250" y="120" width="210" height="70" rx="10" fill="#FFFFFF" stroke="#7C3AED" stroke-width="2.5"/>
+<text x="355.0" y="147.0" font-size="14" fill="#7C3AED" text-anchor="middle" font-weight="bold">Couche cachée</text>
+<text x="355.0" y="172.0" font-size="13" fill="#1F2937" text-anchor="middle" font-weight="normal">a⁽¹⁾ = f(W⁽¹⁾X + b⁽¹⁾)</text>
+<rect x="500" y="120" width="210" height="70" rx="10" fill="#FFFFFF" stroke="#059669" stroke-width="2.5"/>
+<text x="605.0" y="147.0" font-size="14" fill="#059669" text-anchor="middle" font-weight="bold">Sortie</text>
+<text x="605.0" y="172.0" font-size="13" fill="#1F2937" text-anchor="middle" font-weight="normal">ŷ = f(W⁽²⁾a⁽¹⁾ + b⁽²⁾)</text>
+<rect x="750" y="120" width="150" height="70" rx="10" fill="#FFFFFF" stroke="#B91C1C" stroke-width="2.5"/>
+<text x="825.0" y="147.0" font-size="14" fill="#B91C1C" text-anchor="middle" font-weight="bold">Perte (loss)</text>
+<text x="825.0" y="172.0" font-size="13" fill="#1F2937" text-anchor="middle" font-weight="normal">L(ŷ, y)</text>
+<line x1="190.0" y1="140.0" x2="247.0" y2="140.0" stroke="#2563EB" stroke-width="2.5" marker-end="url(#f)"/>
+<line x1="250.0" y1="172.0" x2="193.0" y2="172.0" stroke="#EA580C" stroke-width="2.5" marker-end="url(#bk)"/>
+<line x1="460.0" y1="140.0" x2="497.0" y2="140.0" stroke="#2563EB" stroke-width="2.5" marker-end="url(#f)"/>
+<line x1="500.0" y1="172.0" x2="463.0" y2="172.0" stroke="#EA580C" stroke-width="2.5" marker-end="url(#bk)"/>
+<line x1="710.0" y1="140.0" x2="747.0" y2="140.0" stroke="#2563EB" stroke-width="2.5" marker-end="url(#f)"/>
+<line x1="750.0" y1="172.0" x2="713.0" y2="172.0" stroke="#EA580C" stroke-width="2.5" marker-end="url(#bk)"/>
+<path d="M115,105 C115,60 825,60 825,105" fill="none" stroke="#2563EB" stroke-width="2.5" marker-end="url(#f)"/>
+<text x="470.0" y="52.0" font-size="15" fill="#2563EB" text-anchor="middle" font-weight="bold">① FORWARD : les données traversent le réseau → prédiction ŷ</text>
+<path d="M825,205 C825,252 115,252 115,207" fill="none" stroke="#EA580C" stroke-width="2.5" marker-end="url(#bk)"/>
+<text x="470.0" y="272.0" font-size="15" fill="#EA580C" text-anchor="middle" font-weight="bold">② BACKWARD : l'erreur remonte → gradients ∂L/∂W pour chaque poids</text>
+<text x="470.0" y="306.0" font-size="14" fill="#1F2937" text-anchor="middle" font-weight="bold">③ MISE À JOUR :  W ← W − η · ∂L/∂W     puis on recommence (itération suivante)</text>
+</svg>
