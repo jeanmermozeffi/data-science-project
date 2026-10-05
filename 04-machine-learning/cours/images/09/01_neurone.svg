@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 392" width="780" height="392" font-family="Helvetica, Arial, sans-serif">
+<rect width="780" height="392" rx="14" fill="#FFFFFF"/>
+<defs>
+<marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1F2937"/></marker>
+</defs>
+<line x1="114.0" y1="80.0" x2="332.2" y2="155.2" stroke="#1F2937" stroke-width="1.8" marker-end="url(#a)"/>
+<rect x="214.0" y="109.0" width="22" height="18" rx="4" fill="#FFFFFF" stroke="#CBD5E1"/>
+<text x="225.0" y="122.5" font-size="13" fill="#2563EB" text-anchor="middle" font-weight="normal">w₁</text>
+<line x1="114.0" y1="170.0" x2="330.0" y2="170.0" stroke="#1F2937" stroke-width="1.8" marker-end="url(#a)"/>
+<rect x="214.0" y="154.0" width="22" height="18" rx="4" fill="#FFFFFF" stroke="#CBD5E1"/>
+<text x="225.0" y="167.5" font-size="13" fill="#2563EB" text-anchor="middle" font-weight="normal">w₂</text>
+<line x1="114.0" y1="260.0" x2="332.2" y2="184.8" stroke="#1F2937" stroke-width="1.8" marker-end="url(#a)"/>
+<rect x="214.0" y="199.0" width="22" height="18" rx="4" fill="#FFFFFF" stroke="#CBD5E1"/>
+<text x="225.0" y="212.5" font-size="13" fill="#2563EB" text-anchor="middle" font-weight="normal">w₃</text>
+<circle cx="90.0" cy="80.0" r="24" fill="#FFFFFF" stroke="#2563EB" stroke-width="2.5"/>
+<text x="90.0" y="85.0" font-size="16" fill="#2563EB" text-anchor="middle" font-weight="bold">x₁</text>
+<circle cx="90.0" cy="170.0" r="24" fill="#FFFFFF" stroke="#2563EB" stroke-width="2.5"/>
+<text x="90.0" y="175.0" font-size="16" fill="#2563EB" text-anchor="middle" font-weight="bold">x₂</text>
+<circle cx="90.0" cy="260.0" r="24" fill="#FFFFFF" stroke="#2563EB" stroke-width="2.5"/>
+<text x="90.0" y="265.0" font-size="16" fill="#2563EB" text-anchor="middle" font-weight="bold">x₃</text>
+<rect x="335" y="28" width="90" height="30" rx="6" fill="#FFFFFF" stroke="#7C3AED" stroke-width="2"/>
+<text x="380.0" y="48.0" font-size="13" fill="#7C3AED" text-anchor="middle" font-weight="bold">biais b</text>
+<line x1="380.0" y1="58.0" x2="380.0" y2="120.0" stroke="#1F2937" stroke-width="1.8" marker-end="url(#a)"/>
+<circle cx="380.0" cy="170.0" r="46" fill="#F5F3FF" stroke="#7C3AED" stroke-width="2.5"/>
+<text x="380.0" y="179.0" font-size="28" fill="#7C3AED" text-anchor="middle" font-weight="bold">Σ</text>
+<line x1="426.0" y1="170.0" x2="505.0" y2="170.0" stroke="#1F2937" stroke-width="1.8" marker-end="url(#a)"/>
+<rect x="507" y="142" width="96" height="56" rx="10" fill="#F5F3FF" stroke="#7C3AED" stroke-width="2.5"/>
+<text x="555.0" y="176.0" font-size="18" fill="#7C3AED" text-anchor="middle" font-weight="bold">f(z)</text>
+<line x1="603.0" y1="170.0" x2="676.0" y2="170.0" stroke="#1F2937" stroke-width="1.8" marker-end="url(#a)"/>
+<circle cx="702.0" cy="170.0" r="24" fill="#ECFDF5" stroke="#059669" stroke-width="2.5"/>
+<text x="702.0" y="176.0" font-size="17" fill="#059669" text-anchor="middle" font-weight="bold">a</text>
+<text x="90.0" y="318.0" font-size="13" fill="#6B7280" text-anchor="middle" font-weight="bold">Entrées</text>
+<text x="380.0" y="318.0" font-size="13" fill="#6B7280" text-anchor="middle" font-weight="bold">Somme pondérée</text>
+<text x="555.0" y="318.0" font-size="13" fill="#6B7280" text-anchor="middle" font-weight="bold">Activation</text>
+<text x="702.0" y="318.0" font-size="13" fill="#6B7280" text-anchor="middle" font-weight="bold">Sortie</text>
+<text x="380.0" y="348.0" font-size="15" fill="#1F2937" text-anchor="middle" font-weight="normal">z = w₁x₁ + w₂x₂ + w₃x₃ + b</text>
+<text x="380.0" y="372.0" font-size="14" fill="#6B7280" text-anchor="middle" font-weight="normal">a = f(z)   (f = sigmoïde, ReLU, tanh…)</text>
+</svg>
