@@ -50,12 +50,12 @@
 <text x="820.0" y="200.0" font-size="17" fill="#059669" text-anchor="middle" font-weight="bold">ŷ</text>
 <text x="820.0" y="220.0" font-size="13" fill="#1F2937" text-anchor="middle" font-weight="bold">0.579</text>
 <text x="820.0" y="236.0" font-size="10" fill="#6B7280" text-anchor="middle" font-weight="normal">b = 0.05</text>
-<text x="884.0" y="188.0" font-size="13" fill="#059669" text-anchor="start" font-weight="bold">P(spam) = 57.9 %</text>
+<text x="884.0" y="188.0" font-size="13" fill="#059669" text-anchor="start" font-weight="bold">P(spam) = 57.8 %</text>
 <text x="884.0" y="208.0" font-size="12" fill="#1F2937" text-anchor="start" font-weight="normal">vérité : y = 1 (spam)</text>
 <text x="884.0" y="228.0" font-size="12" fill="#B91C1C" text-anchor="start" font-weight="bold">loss = 0.547</text>
 <text x="260.0" y="40.0" font-size="14" fill="#2563EB" text-anchor="middle" font-weight="bold">Entrée (3 features)</text>
 <text x="560.0" y="40.0" font-size="14" fill="#7C3AED" text-anchor="middle" font-weight="bold">Couche cachée (sigmoïde)</text>
 <text x="820.0" y="40.0" font-size="14" fill="#059669" text-anchor="middle" font-weight="bold">Sortie (sigmoïde)</text>
 <text x="520.0" y="382.0" font-size="12" fill="#6B7280" text-anchor="middle" font-weight="normal">Les nombres sur les connexions sont les poids initiaux. Ce réseau n'est pas encore entraîné :</text>
-<text x="520.0" y="400.0" font-size="12" fill="#6B7280" text-anchor="middle" font-weight="normal">57.9 % de « spam » pour un vrai spam → la backpropagation va corriger les poids.</text>
+<text x="520.0" y="400.0" font-size="12" fill="#6B7280" text-anchor="middle" font-weight="normal">57.8 % de « spam » pour un vrai spam → la backpropagation va corriger les poids.</text>
 </svg>

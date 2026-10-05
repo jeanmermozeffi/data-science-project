@@ -464,7 +464,7 @@ Cet email **est** un spam : $y = 1$.
 
 **Architecture** : 3 entrées → 2 neurones cachés (sigmoïde) → 1 sortie (sigmoïde). Loss : entropie croisée binaire. Taux d'apprentissage $\eta = 0{,}5$. Nombre de paramètres : $3 \times 2 + 2 + 2 \times 1 + 1 = 11$.
 
-![Le réseau de classification d'email avec ses poids initiaux, les activations calculées et la prédiction de 57.9 % de spam](images/09/04_exemple_email.svg)
+![Le réseau de classification d'email avec ses poids initiaux, les activations calculées et la prédiction de 57.8 % de spam](images/09/04_exemple_email.svg)
 
 *Figure 6 — Le réseau avant entraînement, avec ses poids initiaux et le résultat de la forward propagation.*
 
@@ -490,7 +490,7 @@ $$\hat{y} = \sigma(0{,}3165) = 0{,}5785$$
 
 $$L = -\ln(0{,}5785) = 0{,}5474$$
 
-> 🧐 **Interprétation** : le réseau estime à **57,9 %** la probabilité de spam. Il penche du bon côté, mais sans conviction : la loss de 0,547 est élevée. La backpropagation va dire comment corriger chaque poids.
+> 🧐 **Interprétation** : le réseau estime à **57,8 %** la probabilité de spam. Il penche du bon côté, mais sans conviction : la loss de 0,547 est élevée. La backpropagation va dire comment corriger chaque poids.
 
 ### 11.3 Étape 2 — Backpropagation
 
@@ -540,7 +540,7 @@ En refaisant une forward avec les nouveaux poids :
 
 | | Avant | Après 1 itération | Après 50 itérations |
 |---|---|---|---|
-| Probabilité de spam $\hat{y}$ | 57,9 % | **67,2 %** | **98,2 %** |
+| Probabilité de spam $\hat{y}$ | 57,8 % | **67,2 %** | **98,2 %** |
 | Loss | 0,547 | **0,398** | **0,019** |
 
 > 🔑 **Toute la logique du Deep Learning est là** : une forward pour prédire, une backward pour attribuer l'erreur à chaque poids, une petite correction dans le bon sens — et on recommence. Les réseaux géants font exactement cela, sur des milliards de poids et d'exemples.
@@ -863,7 +863,7 @@ La descente de gradient est très sensible à l'échelle des features : standard
 
 5. **La descente de gradient** corrige chaque paramètre dans le sens qui réduit l'erreur : $w \leftarrow w - \eta \, \partial L / \partial w$. On répète ce cycle sur de nombreuses itérations et epochs, en général par **mini-batchs** et avec l'optimiseur **Adam**.
 
-6. **L'exemple de l'email** l'a montré concrètement : en une itération, la probabilité de spam passe de 57,9 % à 67,2 % et la loss de 0,547 à 0,398 ; un poids relié à une entrée nulle ne reçoit aucune correction.
+6. **L'exemple de l'email** l'a montré concrètement : en une itération, la probabilité de spam passe de 57,8 % à 67,2 % et la loss de 0,547 à 0,398 ; un poids relié à une entrée nulle ne reçoit aucune correction.
 
 7. **Le paradigme change la source du signal**, pas la mécanique : étiquettes (supervisé), données elles-mêmes (non supervisé), récompenses (renforcement).
 
