@@ -924,9 +924,14 @@ history2 = model2.fit(X_train, y_train, epochs=40, batch_size=64,
 | Modèle | Paramètres | Epochs effectuées | Accuracy test |
 |--------|------------|-------------------|---------------|
 | CNN de la section 14 (Flatten + Dropout) | 421 642 | 15 | 91,76 % |
-| CNN amélioré (BatchNorm, augmentation, GAP, early stopping) | 75 178 | — | — |
+| CNN amélioré (BatchNorm, augmentation, GAP, early stopping) | 75 178 | 33 (meilleure : 28) | 90,65 % |
 
-> 🧐 **À retenir** : grâce au GlobalAveragePooling, le CNN amélioré a **5,6 fois moins de paramètres** (75 178 contre 421 642). L'augmentation de données rend chaque epoch plus difficile (et plus longue) : il faut plus d'epochs pour converger, d'où l'early stopping qui choisit seul le bon moment pour s'arrêter.
+> 🧐 **Interprétation — un résultat qui surprend, et qui instruit** :
+> - **Ce qui a marché** : grâce au Global Average Pooling, le modèle a **5,6 fois moins de paramètres** (75 178 contre 421 642). L'early stopping a laissé tourner l'entraînement 33 epochs, a gardé les poids de l'epoch 28, et `ReduceLROnPlateau` a divisé plusieurs fois le learning rate quand la validation stagnait.
+> - **Ce qui n'a pas marché** : l'accuracy test (**90,65 %**) est **inférieure** à celle du CNN simple (91,76 %). À la dernière epoch, l'accuracy d'entraînement (90,1 %) est même **plus basse** que celle de validation (91,2 %) : le modèle ne surapprend pas du tout, il **sous-apprend**. Nous l'avons trop régularisé : peu de filtres, dropout partout, et une augmentation (décalages de 10 %, miroirs) qui rend l'entraînement plus difficile que le test, où tous les vêtements de Fashion-MNIST sont **centrés**.
+> - **Que faire ?** Lire le diagnostic de la section 17.1 et appliquer les remèdes du sous-apprentissage : plus de capacité (64 puis 128 filtres, un troisième bloc), une augmentation plus douce (`RandomTranslation(0.05, 0.05)`), moins de dropout.
+
+> 🔑 **La leçon** : la régularisation n'est pas un bonus gratuit. On l'ajoute **pour corriger un surapprentissage observé**, à petites doses, en vérifiant à chaque fois l'effet sur la validation. Empiler toutes les techniques d'un coup peut rendre un modèle moins bon.
 
 ---
 
@@ -1155,7 +1160,7 @@ Les blocs convolutifs servent de « moteur visuel » à des tâches plus riches 
 
 8. **Sur Fashion-MNIST**, un petit CNN de deux blocs convolutifs atteint **91,76 %** d'accuracy en test, contre **87,51 %** pour un réseau dense : 34 % d'erreurs en moins. Les erreurs restantes portent sur des classes visuellement proches (chemise, t-shirt, pull, manteau).
 
-9. **Les courbes d'apprentissage** révèlent sous- et surapprentissage ; on combat le second par l'**augmentation de données**, le **dropout**, la **batch normalization** et l'**early stopping**.
+9. **Les courbes d'apprentissage** révèlent sous- et surapprentissage ; on combat le second par l'**augmentation de données**, le **dropout**, la **batch normalization** et l'**early stopping** — à petites doses : notre CNN « amélioré », trop régularisé, a sous-appris (90,65 % contre 91,76 %).
 
 10. **Le transfer learning** est la méthode par défaut sur de vraies photos : réutiliser un modèle pré-entraîné, geler la base, entraîner une nouvelle tête, puis éventuellement affiner avec un learning rate très petit.
 
