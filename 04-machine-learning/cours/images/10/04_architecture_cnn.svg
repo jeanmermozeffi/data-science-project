@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 380" width="900" height="380" font-family="Helvetica, Arial, sans-serif">
+<rect width="900" height="380" rx="14" fill="#FFFFFF"/>
+<defs>
+<marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1F2937"/></marker>
+</defs>
+<rect x="45.0" y="90.0" width="70.0" height="140.0" rx="3" fill="#FFFFFF" stroke="#1F2937" stroke-width="1.2"/>
+<rect x="40.0" y="95.0" width="70.0" height="140.0" rx="3" fill="#FFFFFF" stroke="#1F2937" stroke-width="1.2"/>
+<rect x="35.0" y="100.0" width="70.0" height="140.0" rx="3" fill="#FFFFFF" stroke="#1F2937" stroke-width="1.2"/>
+<rect x="30.0" y="105.0" width="70.0" height="140.0" rx="3" fill="#F8FAFC" stroke="#1F2937" stroke-width="2"/>
+<text x="72.0" y="79.0" font-size="12" fill="#1F2937" text-anchor="middle" font-weight="bold">Entrée</text>
+<text x="72.0" y="267.0" font-size="12" fill="#1F2937" text-anchor="middle" font-weight="bold">28×28×1</text>
+<text x="72.0" y="283.0" font-size="11" fill="#6B7280" text-anchor="middle" font-weight="normal">image</text>
+<rect x="165.0" y="90.0" width="70.0" height="140.0" rx="3" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.2"/>
+<rect x="160.0" y="95.0" width="70.0" height="140.0" rx="3" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.2"/>
+<rect x="155.0" y="100.0" width="70.0" height="140.0" rx="3" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.2"/>
+<rect x="150.0" y="105.0" width="70.0" height="140.0" rx="3" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="192.0" y="79.0" font-size="12" fill="#2563EB" text-anchor="middle" font-weight="bold">Conv 3×3 + ReLU</text>
+<text x="192.0" y="267.0" font-size="12" fill="#1F2937" text-anchor="middle" font-weight="bold">28×28×32</text>
+<text x="192.0" y="283.0" font-size="11" fill="#6B7280" text-anchor="middle" font-weight="normal">32 filtres</text>
+<line x1="118.0" y1="175.0" x2="146.0" y2="175.0" stroke="#1F2937" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="280.0" y="115.0" width="45.0" height="90.0" rx="3" fill="#FFFFFF" stroke="#059669" stroke-width="1.2"/>
+<rect x="275.0" y="120.0" width="45.0" height="90.0" rx="3" fill="#FFFFFF" stroke="#059669" stroke-width="1.2"/>
+<rect x="270.0" y="125.0" width="45.0" height="90.0" rx="3" fill="#FFFFFF" stroke="#059669" stroke-width="1.2"/>
+<rect x="265.0" y="130.0" width="45.0" height="90.0" rx="3" fill="#ECFDF5" stroke="#059669" stroke-width="2"/>
+<text x="294.5" y="104.0" font-size="12" fill="#059669" text-anchor="middle" font-weight="bold">MaxPool 2×2</text>
+<text x="294.5" y="242.0" font-size="12" fill="#1F2937" text-anchor="middle" font-weight="bold">14×14×32</text>
+<text x="294.5" y="258.0" font-size="11" fill="#6B7280" text-anchor="middle" font-weight="normal">÷2</text>
+<line x1="238.0" y1="175.0" x2="261.0" y2="175.0" stroke="#1F2937" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="380.0" y="115.0" width="45.0" height="90.0" rx="3" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.2"/>
+<rect x="375.0" y="120.0" width="45.0" height="90.0" rx="3" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.2"/>
+<rect x="370.0" y="125.0" width="45.0" height="90.0" rx="3" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.2"/>
+<rect x="365.0" y="130.0" width="45.0" height="90.0" rx="3" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="394.5" y="104.0" font-size="12" fill="#2563EB" text-anchor="middle" font-weight="bold">Conv 3×3 + ReLU</text>
+<text x="394.5" y="242.0" font-size="12" fill="#1F2937" text-anchor="middle" font-weight="bold">14×14×64</text>
+<text x="394.5" y="258.0" font-size="11" fill="#6B7280" text-anchor="middle" font-weight="normal">64 filtres</text>
+<line x1="328.0" y1="175.0" x2="361.0" y2="175.0" stroke="#1F2937" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="485.0" y="132.0" width="28.0" height="56.0" rx="3" fill="#FFFFFF" stroke="#059669" stroke-width="1.2"/>
+<rect x="480.0" y="137.0" width="28.0" height="56.0" rx="3" fill="#FFFFFF" stroke="#059669" stroke-width="1.2"/>
+<rect x="475.0" y="142.0" width="28.0" height="56.0" rx="3" fill="#FFFFFF" stroke="#059669" stroke-width="1.2"/>
+<rect x="470.0" y="147.0" width="28.0" height="56.0" rx="3" fill="#ECFDF5" stroke="#059669" stroke-width="2"/>
+<text x="491.0" y="121.0" font-size="12" fill="#059669" text-anchor="middle" font-weight="bold">MaxPool</text>
+<text x="491.0" y="225.0" font-size="12" fill="#1F2937" text-anchor="middle" font-weight="bold">7×7×64</text>
+<text x="491.0" y="241.0" font-size="11" fill="#6B7280" text-anchor="middle" font-weight="normal">÷2</text>
+<line x1="428.0" y1="175.0" x2="466.0" y2="175.0" stroke="#1F2937" stroke-width="1.6" marker-end="url(#a)"/>
+<line x1="516.0" y1="175.0" x2="556.0" y2="175.0" stroke="#1F2937" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="560.0" y="75.0" width="18.0" height="200.0" rx="3" fill="#F5F3FF" stroke="#7C3AED" stroke-width="2"/>
+<text x="569.0" y="62.0" font-size="12" fill="#7C3AED" text-anchor="middle" font-weight="bold">Flatten</text>
+<text x="569.0" y="297.0" font-size="12" fill="#1F2937" text-anchor="middle" font-weight="bold">3 136</text>
+<line x1="582.0" y1="175.0" x2="621.0" y2="175.0" stroke="#1F2937" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="625.0" y="105.0" width="18.0" height="140.0" rx="3" fill="#F5F3FF" stroke="#7C3AED" stroke-width="2"/>
+<text x="634.0" y="92.0" font-size="12" fill="#7C3AED" text-anchor="middle" font-weight="bold">Dense</text>
+<text x="634.0" y="267.0" font-size="12" fill="#1F2937" text-anchor="middle" font-weight="bold">128</text>
+<text x="634.0" y="283.0" font-size="11" fill="#6B7280" text-anchor="middle" font-weight="normal">ReLU</text>
+<line x1="647.0" y1="175.0" x2="686.0" y2="175.0" stroke="#1F2937" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="690.0" y="135.0" width="18.0" height="80.0" rx="3" fill="#FFF7ED" stroke="#EA580C" stroke-width="2"/>
+<text x="699.0" y="122.0" font-size="12" fill="#EA580C" text-anchor="middle" font-weight="bold">Dense</text>
+<text x="699.0" y="237.0" font-size="12" fill="#1F2937" text-anchor="middle" font-weight="bold">10</text>
+<text x="699.0" y="253.0" font-size="11" fill="#6B7280" text-anchor="middle" font-weight="normal">softmax</text>
+<line x1="712.0" y1="175.0" x2="760.0" y2="175.0" stroke="#1F2937" stroke-width="1.6" marker-end="url(#a)"/>
+<text x="768.0" y="170.0" font-size="13" fill="#EA580C" text-anchor="start" font-weight="bold">« Ankle boot »</text>
+<text x="768.0" y="188.0" font-size="12" fill="#6B7280" text-anchor="start" font-weight="normal">p ≈ 1,00</text>
+<line x1="30.0" y1="330.0" x2="545.0" y2="330.0" stroke="#2563EB" stroke-width="2"/>
+<text x="287.0" y="352.0" font-size="13" fill="#2563EB" text-anchor="middle" font-weight="bold">EXTRACTION DE CARACTÉRISTIQUES</text>
+<text x="287.0" y="368.0" font-size="11" fill="#6B7280" text-anchor="middle" font-weight="normal">(convolutions + pooling : contours → motifs → parties d'objets)</text>
+<line x1="560.0" y1="330.0" x2="712.0" y2="330.0" stroke="#EA580C" stroke-width="2"/>
+<text x="636.0" y="352.0" font-size="13" fill="#EA580C" text-anchor="middle" font-weight="bold">CLASSIFICATION</text>
+<text x="636.0" y="368.0" font-size="11" fill="#6B7280" text-anchor="middle" font-weight="normal">(couches denses)</text>
+</svg>
