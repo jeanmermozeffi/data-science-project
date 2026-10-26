@@ -1,6 +1,6 @@
 # 🧠 Checkpoint 9 — Un Réseau de Neurones Simple, Expliqué
 
-> **Module Data Science — Intelligence Artificielle** | Prérequis : cours "Fondamentaux IA/ML/DL" (`07-...md`)
+> **Module Data Science — Intelligence Artificielle** | Prérequis : cours "Fondamentaux IA/ML/DL" (`01-...md`)
 
 ---
 
@@ -95,9 +95,9 @@ Sur un neurone à **une entrée** (`y = sigmoïde(w·x + b)`) et un exemple cibl
 Sur un dataset de classification (ex. `load_breast_cancer` de scikit-learn) :
 
 1. Chargez les données, séparez **train/test** (stratifié).
-2. **Standardisez** les features (⚠️ indispensable pour un réseau — cours 05).
+2. **Standardisez** les features (⚠️ indispensable pour un réseau — cours 05 de Machine Learning).
 3. Entraînez un `MLPClassifier` (ex. `hidden_layer_sizes=(16, 8)`, `max_iter=500`).
-4. Évaluez : accuracy, matrice de confusion, F1 (cours 04).
+4. Évaluez : accuracy, matrice de confusion, F1 (cours 04 de Machine Learning).
 5. Tracez la **courbe de loss** (`mlp.loss_curve_`) : observez la descente.
 6. **Expliquez** : combien de couches ? de neurones ? que montre la courbe de loss ?
 
@@ -299,7 +299,7 @@ La **taille du pas** de mise à jour des poids. Trop grand → la loss oscille o
 <details>
 <summary><b>5. Pourquoi standardise-t-on les features avant le MLPClassifier (Partie D) ?</b></summary>
 
-Un réseau apprend par **descente de gradient**, sensible à l'échelle des variables. Sans standardisation, les variables de grande amplitude dominent et l'entraînement devient lent/instable. On `fit` le scaler sur le **train seul** (anti-fuite, cours 05).
+Un réseau apprend par **descente de gradient**, sensible à l'échelle des variables. Sans standardisation, les variables de grande amplitude dominent et l'entraînement devient lent/instable. On `fit` le scaler sur le **train seul** (anti-fuite, cours 05 de Machine Learning).
 </details>
 
 <details>

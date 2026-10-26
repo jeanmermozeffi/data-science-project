@@ -1,6 +1,6 @@
 # 🖼️ Concevoir et entraîner des CNN (Design and Train CNNs) — Cours Bootcamp Data Science
 
-> **Module Data Science — Deep Learning** | Prérequis : cours "Forward & Backward Propagation" (`09-...md`), cours "Fondamentaux IA/ML/DL" (`07-...md`), NumPy
+> **Module Data Science — Deep Learning** | Prérequis : cours "Forward & Backward Propagation" (`03-...md`), cours "Fondamentaux IA/ML/DL" (`01-...md`), NumPy
 
 ---
 
@@ -165,7 +165,7 @@ Ensemble, ils permettent de reconnaître un objet quelle que soit sa position �
 
 ## 5. Vue d'ensemble d'un CNN
 
-![Architecture d'un CNN : entrée 28×28×1, convolution 32 filtres, max pooling, convolution 64 filtres, max pooling, flatten, dense 128, dense 10 softmax](images/10/04_architecture_cnn.svg)
+![Architecture d'un CNN : entrée 28×28×1, convolution 32 filtres, max pooling, convolution 64 filtres, max pooling, flatten, dense 128, dense 10 softmax](images/04/04_architecture_cnn.svg)
 
 *Figure 1 — Le CNN que nous construirons et entraînerons dans la Partie III. Les dimensions sont écrites sous chaque bloc.*
 
@@ -196,7 +196,7 @@ La **convolution** fait glisser un petit tableau de poids, le **filtre** (ou **n
 
 ### 6.1 L'opération pas à pas
 
-![Convolution d'une image 5×5 par un filtre 3×3 : la fenêtre bleue multipliée case par case par le filtre donne −5, première case de la carte 3×3](images/10/01_convolution.svg)
+![Convolution d'une image 5×5 par un filtre 3×3 : la fenêtre bleue multipliée case par case par le filtre donne −5, première case de la carte 3×3](images/04/01_convolution.svg)
 
 *Figure 2 — Convolution d'une image 5 × 5 par un filtre 3 × 3 (sans biais). Chaque position du filtre produit une case de la carte de caractéristiques.*
 
@@ -304,7 +304,7 @@ ENTRÉE 32×32×3            32 FILTRES de 3×3×3              SORTIE 30×30×3
 
 ### 6.4 Le pas (stride) et le remplissage (padding)
 
-![À gauche : image 5×5 entourée d'une bordure de zéros, la sortie garde la taille 5×5. À droite : filtre qui avance de 2 pixels, la sortie fait 2×2](images/10/02_padding_stride.svg)
+![À gauche : image 5×5 entourée d'une bordure de zéros, la sortie garde la taille 5×5. À droite : filtre qui avance de 2 pixels, la sortie fait 2×2](images/04/02_padding_stride.svg)
 
 *Figure 3 — a) Le padding ajoute une bordure de zéros pour conserver la taille. b) Le stride fait avancer le filtre de plusieurs pixels à la fois.*
 
@@ -383,7 +383,7 @@ $$\begin{pmatrix} -5 & -4 & 0 \\ -10 & -2 & 2 \\ 0 & -2 & -4 \end{pmatrix} \xrig
 
 | Pourquoi ReLU ? | Explication |
 |-----------------|-------------|
-| **Non-linéarité** | sans elle, empiler des convolutions reviendrait à une seule convolution (cours 09) |
+| **Non-linéarité** | sans elle, empiler des convolutions reviendrait à une seule convolution (cours 03) |
 | **Sélectivité** | ne garde que les endroits où le motif est **présent** (valeurs positives) |
 | **Gradient sain** | dérivée égale à 1 pour $z > 0$ : limite le gradient qui s'évanouit dans les réseaux profonds |
 | **Rapidité** | un simple `max`, très rapide à calculer |
@@ -398,7 +398,7 @@ $$\begin{pmatrix} -5 & -4 & 0 \\ -10 & -2 & 2 \\ 0 & -2 & -4 \end{pmatrix} \xrig
 
 Le **pooling** (sous-échantillonnage) réduit la taille spatiale des cartes de caractéristiques en **résumant** chaque petite zone par une seule valeur. Il est appliqué **canal par canal** : le nombre de canaux ne change pas.
 
-![Max pooling et average pooling d'une carte 4×4 avec des fenêtres 2×2 : le max donne 6, 5, 8, 7 et la moyenne 3,5, 2, 3,5, 3,5](images/10/03_pooling.svg)
+![Max pooling et average pooling d'une carte 4×4 avec des fenêtres 2×2 : le max donne 6, 5, 8, 7 et la moyenne 3,5, 2, 3,5, 3,5](images/04/03_pooling.svg)
 
 *Figure 4 — Pooling 2 × 2 avec un stride de 2 : chaque zone colorée est résumée par une valeur.*
 
@@ -425,7 +425,7 @@ Le **pooling** (sous-échantillonnage) réduit la taille spatiale des cartes de 
 
 ### 9.1 Flatten puis Dense
 
-Après les blocs convolutifs, on obtient un volume de caractéristiques (7 × 7 × 64 dans la Figure 1). Pour décider de la classe, on le transforme en vecteur, puis on utilise des couches **denses** — exactement celles du cours 09.
+Après les blocs convolutifs, on obtient un volume de caractéristiques (7 × 7 × 64 dans la Figure 1). Pour décider de la classe, on le transforme en vecteur, puis on utilise des couches **denses** — exactement celles du cours 03.
 
 | Couche | Rôle | Dans notre CNN |
 |--------|------|----------------|
@@ -453,7 +453,7 @@ tete_gap = [layers.GlobalAveragePooling2D(),
 
 ### 9.3 Dimensionner la sortie
 
-C'est la même règle que pour un réseau dense (cours 09, section 5.1) :
+C'est la même règle que pour un réseau dense (cours 03, section 5.1) :
 
 | Tâche | Dernière couche | Loss Keras |
 |-------|-----------------|------------|
@@ -517,7 +517,7 @@ L'histoire des CNN est une suite d'idées qui sont devenues des briques standard
 
 ### 11.1 Zoom sur l'idée de ResNet : la connexion résiduelle
 
-Plus un réseau est profond, plus il est difficile à entraîner : le gradient s'évanouit en remontant les couches (cours 09, section 16.2). ResNet ajoute un **raccourci** qui additionne l'entrée d'un bloc à sa sortie :
+Plus un réseau est profond, plus il est difficile à entraîner : le gradient s'évanouit en remontant les couches (cours 03, section 16.2). ResNet ajoute un **raccourci** qui additionne l'entrée d'un bloc à sa sortie :
 
 $$\text{sortie} = F(x) + x$$
 
@@ -539,7 +539,7 @@ Le bloc n'a plus qu'à apprendre une **correction** $F(x)$ de son entrée, et le
 
 ## 12. Le pipeline d'entraînement
 
-Un CNN s'entraîne **exactement comme le réseau du cours 09** : forward → loss → backpropagation → mise à jour, répété sur des mini-batchs pendant plusieurs epochs. Keras organise ce travail en étapes claires :
+Un CNN s'entraîne **exactement comme le réseau du cours 03** : forward → loss → backpropagation → mise à jour, répété sur des mini-batchs pendant plusieurs epochs. Keras organise ce travail en étapes claires :
 
 ```
 ┌──────────────────────────────────────────────────────────────────────────┐
@@ -595,10 +595,10 @@ class_names = ["T-shirt/top", "Trouser", "Pullover", "Dress", "Coat",
 
 | Opération | Pourquoi |
 |-----------|----------|
-| **Diviser par 255** | des entrées entre 0 et 1 rendent la descente de gradient bien plus stable (cours 09, section 16.4) |
+| **Diviser par 255** | des entrées entre 0 et 1 rendent la descente de gradient bien plus stable (cours 03, section 16.4) |
 | **Ajouter le canal** | `Conv2D` attend des tenseurs `(batch, hauteur, largeur, canaux)` |
 | **Garder les étiquettes entières** | avec la loss `sparse_categorical_crossentropy`, pas besoin d'encodage one-hot |
-| **Garder un jeu de test intact** | il ne sert qu'**une fois**, à la toute fin (cours *Train/Test Split*, `03-...md`) |
+| **Garder un jeu de test intact** | il ne sert qu'**une fois**, à la toute fin (cours *Train/Test Split*, `04-machine-learning/cours/03-...md`) |
 | **Prévoir une validation** | `validation_split=0.1` dans `fit()` réserve 10 % du train pour surveiller le surapprentissage |
 
 > ⚠️ **Les pixels sont déjà sur une échelle commune** (0–255) : pas besoin de `StandardScaler`. Diviser par 255 suffit. Pour un modèle pré-entraîné, en revanche, il faut utiliser **sa** fonction de prétraitement (section 19).
@@ -658,7 +658,7 @@ model.compile(
 
 | Argument | Choix | Rôle |
 |----------|-------|------|
-| `optimizer` | **Adam** ⭐ | règle de mise à jour des poids (cours 09, section 10.3) ; robuste par défaut |
+| `optimizer` | **Adam** ⭐ | règle de mise à jour des poids (cours 03, section 10.3) ; robuste par défaut |
 | `loss` | entropie croisée catégorielle | ce que la backprop minimise |
 | `metrics` | accuracy | ce que **nous** lisons pour juger le modèle (n'intervient pas dans l'apprentissage) |
 
@@ -747,7 +747,7 @@ modele = keras.models.load_model("cnn_fashion.keras")  # prêt pour predict()
 
 ## 16. 🧩 Ce qui se passe pendant `fit()` : la backpropagation dans un CNN
 
-Rien de nouveau sous le soleil : `fit()` exécute la boucle du cours 09, 844 fois par epoch.
+Rien de nouveau sous le soleil : `fit()` exécute la boucle du cours 03, 844 fois par epoch.
 
 ```
 pour chaque epoch :
@@ -769,7 +769,7 @@ $$\frac{\partial L}{\partial w_{u,v}} = \sum_{i,j} \delta(i, j) \cdot X(i+u,\; j
 
 où $\delta(i, j) = \partial L / \partial S(i, j)$ est l'erreur de la case $(i, j)$ de la carte de sortie.
 
-> 🔑 C'est la même idée que l'équation 3 du cours 09 (« erreur d'arrivée × activation de départ »), **additionnée sur toutes les positions** où le filtre a été appliqué. Le filtre reçoit l'avis de toute l'image en une seule mise à jour.
+> 🔑 C'est la même idée que l'équation 3 du cours 03 (« erreur d'arrivée × activation de départ »), **additionnée sur toutes les positions** où le filtre a été appliqué. Le filtre reçoit l'avis de toute l'image en une seule mise à jour.
 
 ### 16.2 À travers un max pooling : le gradient suit le gagnant
 
@@ -803,7 +803,7 @@ plt.plot(h["val_loss"], label="validation")
 plt.xlabel("epoch"); plt.ylabel("loss"); plt.legend(); plt.show()
 ```
 
-![Courbes de loss d'entraînement et de validation pour le CNN sans dropout et avec dropout](images/10/05_courbes_apprentissage.svg)
+![Courbes de loss d'entraînement et de validation pour le CNN sans dropout et avec dropout](images/04/05_courbes_apprentissage.svg)
 
 *Figure 5 — Courbes de loss obtenues sur Fashion-MNIST (15 epochs). a) Sans dropout, la loss de validation atteint son minimum à l'epoch 5 puis remonte : surapprentissage. b) Avec `Dropout(0.5)`, les deux courbes restent proches et la validation se stabilise.*
 
@@ -837,7 +837,7 @@ loss                          loss                          loss
 | **Bon ajustement** | les deux courbes baissent et restent **proches** | garder le modèle de la meilleure epoch de validation |
 | **Surapprentissage** | train **continue de baisser**, validation **remonte** | augmentation de données, dropout, régularisation, early stopping, plus de données, transfer learning |
 
-> 🔗 C'est le compromis biais / variance du cours *Train/Test Split et Validation Croisée* (`03-...md`), observé epoch par epoch.
+> 🔗 C'est le compromis biais / variance du cours *Train/Test Split et Validation Croisée* (`04-machine-learning/cours/03-...md`), observé epoch par epoch.
 
 ---
 
@@ -1057,7 +1057,7 @@ Sur notre CNN (section 14), la matrice de confusion révèle où se concentrent 
 
 > 🧐 **Interprétation** : les erreurs ne sont pas aléatoires. Elles portent sur des vêtements **qui se ressemblent vraiment** en 28 × 28 pixels et en niveaux de gris (chemise, t-shirt, pull, manteau). Pour progresser, il faudrait des images plus détaillées ou un modèle plus puissant — pas forcément plus d'epochs.
 
-> 🔗 Précision, rappel et F1 par classe : voir le cours *Métriques d'évaluation* (`04-...md`).
+> 🔗 Précision, rappel et F1 par classe : voir le cours *Métriques d'évaluation* (`04-machine-learning/cours/04-...md`).
 
 ### 21.2 Visualiser les cartes de caractéristiques
 
@@ -1070,7 +1070,7 @@ cartes1, cartes2 = extracteur.predict(X_test[:1], verbose=0)
 print(cartes1.shape, cartes2.shape)     # (1, 28, 28, 32) (1, 14, 14, 64)
 ```
 
-![Une bottine du jeu de test et huit cartes de caractéristiques de la première puis de la deuxième couche de convolution](images/10/06_cartes_caracteristiques.png)
+![Une bottine du jeu de test et huit cartes de caractéristiques de la première puis de la deuxième couche de convolution](images/04/06_cartes_caracteristiques.png)
 
 *Figure 6 — Ce que « voit » le CNN entraîné pour une bottine. Première convolution : des cartes qui ressemblent encore à l'image, chacune mettant en valeur des contours ou des zones différentes. Deuxième convolution : des cartes plus petites et plus abstraites.*
 

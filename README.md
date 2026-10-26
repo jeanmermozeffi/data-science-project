@@ -21,9 +21,16 @@ Repo instructeur — le repo apprenant est [data-scientist-bootcamp-2026-05](htt
 └── TP/                   # Data Cleaning (Employés) + web-scraping (exercice HTML/CSS)
 
 04-machine-learning/
-├── cours/                # Algorithmes ML, Checkpoint Iris, Train/Test & Validation croisée, Métriques d'évaluation, Nettoyage & Feature Scaling, Checkpoint 8 Preprocessing, Fondamentaux IA/ML/DL, Checkpoint 9 Réseau de neurones, Forward & Backward Propagation, Concevoir et entraîner des CNN
+├── cours/                # 01 Algorithmes ML · 02 Checkpoint 5 Iris · 03 Train/Test & Validation croisée
+│                         # 04 Métriques d'évaluation · 05 Nettoyage & Feature Scaling · 06 Checkpoint 8 Preprocessing
 ├── notebooks/            # Notebooks interactifs
 └── TP/                   # TP1 Loyer, TP2 Crédit, TP3 Churn, TP4 Facture (énoncés + guides corrigés + notebooks)
+
+05-deep-learning/
+├── cours/                # 01 Fondamentaux IA/ML/DL · 02 Checkpoint 9 Réseau de neurones
+│   │                     # 03 Forward & Backward Propagation · 04 Concevoir et entraîner des CNN
+│   └── images/           # Illustrations des cours 03 et 04
+└── notebooks/            # Notebooks interactifs (TensorFlow/Keras pour le 04 ; Colab + GPU conseillé)
 
 data/                     # Jeux de données partagés (CSV)
 checkpoint/               # Corrections des checkpoints

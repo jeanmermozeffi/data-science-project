@@ -1,6 +1,6 @@
 # 🔁 Forward et Backward Propagation — Cours Bootcamp Data Science
 
-> **Module Data Science — Deep Learning** | Prérequis : cours "Fondamentaux IA/ML/DL" (`07-...md`), Checkpoint 9, notions de dérivées
+> **Module Data Science — Deep Learning** | Prérequis : cours "Fondamentaux IA/ML/DL" (`01-...md`), Checkpoint 9, notions de dérivées
 
 ---
 
@@ -66,7 +66,7 @@ Un **réseau de neurones artificiels** (*Artificial Neural Network*, ANN) est un
 
 ## 2. Les composants d'un réseau de neurones
 
-![Anatomie d'un neurone artificiel : entrées pondérées, somme avec biais, activation, sortie](images/09/01_neurone.svg)
+![Anatomie d'un neurone artificiel : entrées pondérées, somme avec biais, activation, sortie](images/03/01_neurone.svg)
 
 *Figure 1 — Un neurone : il pondère ses entrées, ajoute un biais, puis applique une fonction d'activation.*
 
@@ -99,7 +99,7 @@ $$z = \sum_{i=1}^{n} w_i x_i + b$$
 
 $$a = f(z)$$
 
-![Courbes des fonctions d'activation sigmoïde, tanh et ReLU](images/09/06_fonctions_activation.svg)
+![Courbes des fonctions d'activation sigmoïde, tanh et ReLU](images/03/06_fonctions_activation.svg)
 
 *Figure 2 — Les trois fonctions d'activation les plus utilisées, et leurs dérivées (indispensables à la backpropagation).*
 
@@ -171,7 +171,7 @@ L'apprentissage d'un réseau suit un processus structuré, répété des millier
 
 ## 5. Les couches d'un réseau de neurones
 
-![Architecture d'un réseau de neurones : couche d'entrée à 3 neurones, deux couches cachées de 4 neurones, couche de sortie à 2 neurones](images/09/02_couches_reseau.svg)
+![Architecture d'un réseau de neurones : couche d'entrée à 3 neurones, deux couches cachées de 4 neurones, couche de sortie à 2 neurones](images/03/02_couches_reseau.svg)
 
 *Figure 3 — Un réseau dense « 3 → 4 → 4 → 2 » : une couche d'entrée, deux couches cachées, une couche de sortie. Chaque trait est un poids.*
 
@@ -238,7 +238,7 @@ Pour le réseau de la Figure 3 (3 → 4 → 4 → 2) :
 
 ## 6. Vue d'ensemble du fonctionnement
 
-![Schéma du cycle d'apprentissage : forward de l'entrée vers la loss, backward de la loss vers l'entrée, puis mise à jour des poids](images/09/03_forward_backward.svg)
+![Schéma du cycle d'apprentissage : forward de l'entrée vers la loss, backward de la loss vers l'entrée, puis mise à jour des poids](images/03/03_forward_backward.svg)
 
 *Figure 4 — Le cycle complet : ① les données avancent jusqu'à la prédiction et à la loss, ② l'erreur remonte pour calculer les gradients, ③ les poids sont mis à jour.*
 
@@ -332,7 +332,7 @@ Sur un jeu de $m$ exemples, on prend la **moyenne** des pertes individuelles (on
 
 > 💡 **Pourquoi l'entropie croisée en classification ?** Elle pénalise très fortement une prédiction **confiante et fausse** : prédire $\hat{y} = 0{,}01$ pour un vrai spam ($y=1$) coûte $-\ln(0{,}01) \approx 4{,}6$, alors que prédire $0{,}9$ ne coûte que $0{,}105$. De plus, combinée à une sortie sigmoïde, elle donne un gradient très simple (section 9.3).
 
-> 🔗 Ce sont les mêmes notions que dans le cours **Métriques d'évaluation** (`04-...md`) : MSE pour la régression, *log loss* pour la classification.
+> 🔗 Ce sont les mêmes notions que dans le cours **Métriques d'évaluation** (`04-machine-learning/cours/04-...md`) : MSE pour la régression, *log loss* pour la classification.
 
 ---
 
@@ -398,7 +398,7 @@ Une seule correction ne suffit pas. On répète **forward → loss → backward 
 
 $$W^{[l]} \leftarrow W^{[l]} - \eta \, \frac{\partial L}{\partial W^{[l]}} \qquad b^{[l]} \leftarrow b^{[l]} - \eta \, \frac{\partial L}{\partial b^{[l]}}$$
 
-![Courbe de la loss qui décroît au fil des itérations, de 0.547 à 0.019](images/09/05_courbe_loss.svg)
+![Courbe de la loss qui décroît au fil des itérations, de 0.547 à 0.019](images/03/05_courbe_loss.svg)
 
 *Figure 5 — La loss de l'exemple « email » (section 11) au fil de 50 itérations : 0,547 → 0,398 → 0,171 → 0,048 → 0,019. Chaque point correspond à un cycle forward + backward + mise à jour.*
 
@@ -464,7 +464,7 @@ Cet email **est** un spam : $y = 1$.
 
 **Architecture** : 3 entrées → 2 neurones cachés (sigmoïde) → 1 sortie (sigmoïde). Loss : entropie croisée binaire. Taux d'apprentissage $\eta = 0{,}5$. Nombre de paramètres : $3 \times 2 + 2 + 2 \times 1 + 1 = 11$.
 
-![Le réseau de classification d'email avec ses poids initiaux, les activations calculées et la prédiction de 57.8 % de spam](images/09/04_exemple_email.svg)
+![Le réseau de classification d'email avec ses poids initiaux, les activations calculées et la prédiction de 57.8 % de spam](images/03/04_exemple_email.svg)
 
 *Figure 6 — Le réseau avant entraînement, avec ses poids initiaux et le résultat de la forward propagation.*
 
@@ -774,11 +774,11 @@ Un réseau a souvent assez de paramètres pour **mémoriser** son jeu d'entraîn
 | **Early stopping** | arrête l'entraînement quand la loss de validation remonte |
 | **Réseau plus petit** | moins de capacité à mémoriser |
 
-> 🔗 C'est le même compromis biais / variance que dans le cours *Train/Test Split et Validation Croisée* (`03-...md`).
+> 🔗 C'est le même compromis biais / variance que dans le cours *Train/Test Split et Validation Croisée* (`04-machine-learning/cours/03-...md`).
 
 ### 16.4 Ne pas oublier la mise à l'échelle des données
 
-La descente de gradient est très sensible à l'échelle des features : standardisez toujours les entrées (`StandardScaler`, ajusté sur le train uniquement — cours `05-...md`).
+La descente de gradient est très sensible à l'échelle des features : standardisez toujours les entrées (`StandardScaler`, ajusté sur le train uniquement — cours `04-machine-learning/cours/05-...md`).
 
 ---
 
@@ -982,7 +982,7 @@ La mécanique (forward, backprop, mise à jour) est identique ; seule la **sourc
 3. **Learning rate** : entraînez le réseau de la section 12 avec $\eta \in \{0{,}01 ;\ 0{,}5 ;\ 5\}$ et tracez les trois courbes de loss sur un même graphique. Décrivez chaque comportement.
 4. **Surapprentissage** : passez la couche cachée à 256 neurones, réduisez le jeu d'entraînement à 100 exemples, et tracez les loss d'entraînement et de test au fil des epochs. Repérez le moment où le modèle commence à surapprendre.
 
-> 🔗 **Pour aller plus loin** : le Checkpoint 9 (`08-...md`) entraîne un `MLPClassifier` sur un jeu de données réel ; reprenez-le en vous demandant, à chaque étape, ce que font la forward et la backward.
+> 🔗 **Pour aller plus loin** : le Checkpoint 9 (`02-...md`) entraîne un `MLPClassifier` sur un jeu de données réel ; reprenez-le en vous demandant, à chaque étape, ce que font la forward et la backward.
 
 ---
 

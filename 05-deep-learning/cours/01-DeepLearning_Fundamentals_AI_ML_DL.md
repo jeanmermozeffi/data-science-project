@@ -603,7 +603,7 @@ Par exemple : (1) **boîte noire** peu explicable (problématique en santé/just
 
 ### 🛠️ Exercice pratique
 
-Voir le **Checkpoint 9 — Réseau de neurones simple** ([`08-DataScience_Checkpoint9_Neural_Network.md`](08-DataScience_Checkpoint9_Neural_Network.md)) : construire un neurone puis un petit réseau en NumPy (forward), et entraîner un `MLPClassifier` sur un vrai dataset, avec explication de chaque étape.
+Voir le **Checkpoint 9 — Réseau de neurones simple** ([`02-DeepLearning_Checkpoint9_Neural_Network.md`](02-DeepLearning_Checkpoint9_Neural_Network.md)) : construire un neurone puis un petit réseau en NumPy (forward), et entraîner un `MLPClassifier` sur un vrai dataset, avec explication de chaque étape.
 
 ---
 
