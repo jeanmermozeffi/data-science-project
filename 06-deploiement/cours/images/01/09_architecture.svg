@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 488" width="940" height="488" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+<rect width="940" height="488" rx="14" fill="#fcfcfb"/>
+<defs><marker id="fl" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#52514e"/></marker></defs>
+<text x="470.0" y="34.0" font-size="15" fill="#0b0b0b" text-anchor="middle" font-weight="bold">L'architecture du projet : qui fait quoi ?</text>
+<rect x="30" y="70" width="190" height="70" rx="10" fill="#f3f2ee" stroke="#c3c2b7" stroke-width="2"/>
+<text x="125.0" y="96.0" font-size="14" fill="#0b0b0b" text-anchor="middle" font-weight="bold">demandes_credit.csv</text>
+<text x="125.0" y="116.0" font-size="12" fill="#52514e" text-anchor="middle" font-weight="normal">7 000 demandes historiques</text>
+<line x1="222" y1="105" x2="278" y2="105" stroke="#52514e" stroke-width="2" marker-end="url(#fl)"/>
+<rect x="280" y="70" width="200" height="70" rx="10" fill="#e6eef9" stroke="#1c5cab" stroke-width="2"/>
+<text x="380.0" y="96.0" font-size="14" fill="#0b0b0b" text-anchor="middle" font-weight="bold">entrainer_modele.py</text>
+<text x="380.0" y="116.0" font-size="12" fill="#52514e" text-anchor="middle" font-weight="normal">entraîne · choisit les seuils</text>
+<line x1="482" y1="105" x2="538" y2="105" stroke="#52514e" stroke-width="2" marker-end="url(#fl)"/>
+<text x="510.0" y="97.0" font-size="11" fill="#52514e" text-anchor="middle" font-weight="normal">produit</text>
+<rect x="540" y="60" width="220" height="90" rx="10" fill="#e6eef9" stroke="#1c5cab" stroke-width="2"/>
+<text x="650.0" y="86.0" font-size="14" fill="#0b0b0b" text-anchor="middle" font-weight="bold">modele/</text>
+<text x="650.0" y="106.0" font-size="12" fill="#52514e" text-anchor="middle" font-weight="normal">modele_credit.joblib</text>
+<text x="650.0" y="123.0" font-size="12" fill="#52514e" text-anchor="middle" font-weight="normal">fiche_modele.json</text>
+<line x1="650" y1="152" x2="650" y2="208" stroke="#52514e" stroke-width="2" marker-end="url(#fl)"/>
+<text x="650.0" y="180.0" font-size="11" fill="#52514e" text-anchor="middle" font-weight="normal">chargé par</text>
+<rect x="530" y="210" width="240" height="80" rx="10" fill="#e3f6ee" stroke="#14875e" stroke-width="2"/>
+<text x="650.0" y="236.0" font-size="14" fill="#0b0b0b" text-anchor="middle" font-weight="bold">scoring.py</text>
+<text x="650.0" y="256.0" font-size="12" fill="#52514e" text-anchor="middle" font-weight="normal">logique métier pure :</text>
+<text x="650.0" y="273.0" font-size="12" fill="#52514e" text-anchor="middle" font-weight="normal">valider · prédire · expliquer</text>
+<line x1="528" y1="250" x2="452" y2="250" stroke="#52514e" stroke-width="2" marker-end="url(#fl)"/>
+<text x="490.0" y="242.0" font-size="11" fill="#52514e" text-anchor="middle" font-weight="normal">appelé par</text>
+<rect x="210" y="210" width="240" height="80" rx="10" fill="#e3f6ee" stroke="#14875e" stroke-width="2"/>
+<text x="330.0" y="236.0" font-size="14" fill="#0b0b0b" text-anchor="middle" font-weight="bold">app.py (Streamlit)</text>
+<text x="330.0" y="256.0" font-size="12" fill="#52514e" text-anchor="middle" font-weight="normal">interface : formulaire,</text>
+<text x="330.0" y="273.0" font-size="12" fill="#52514e" text-anchor="middle" font-weight="normal">avis, journal, lot, fiche</text>
+<line x1="330" y1="292" x2="330" y2="348" stroke="#52514e" stroke-width="2" marker-end="url(#fl)"/>
+<rect x="150" y="350" width="360" height="70" rx="10" fill="#fde7dc" stroke="#d4581f" stroke-width="2"/>
+<text x="330.0" y="376.0" font-size="14" fill="#0b0b0b" text-anchor="middle" font-weight="bold">👥 Utilisateurs métier</text>
+<text x="330.0" y="396.0" font-size="12" fill="#52514e" text-anchor="middle" font-weight="normal">agents de crédit · comité · service risque</text>
+<rect x="600" y="350" width="240" height="70" rx="10" fill="#f3f2ee" stroke="#c3c2b7" stroke-width="2"/>
+<text x="720.0" y="376.0" font-size="14" fill="#0b0b0b" text-anchor="middle" font-weight="bold">tests/</text>
+<text x="720.0" y="396.0" font-size="12" fill="#52514e" text-anchor="middle" font-weight="normal">pytest : scoring.py</text>
+<text x="720.0" y="413.0" font-size="12" fill="#52514e" text-anchor="middle" font-weight="normal">AppTest : app.py</text>
+<line x1="700" y1="348" x2="700" y2="294" stroke="#52514e" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#fl)"/>
+<text x="708.0" y="325.0" font-size="11" fill="#52514e" text-anchor="start" font-weight="normal">vérifie</text>
+<line x1="600" y1="360" x2="452" y2="280" stroke="#52514e" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#fl)"/>
+<text x="470.0" y="450.0" font-size="12" fill="#52514e" text-anchor="middle" font-weight="normal">Séparer la logique (scoring.py) de l'interface (app.py) : on teste l'une sans l'autre, et on peut</text>
+<text x="470.0" y="468.0" font-size="12" fill="#52514e" text-anchor="middle" font-weight="normal">remplacer Streamlit par une API sans réécrire les règles métier.</text>
+</svg>

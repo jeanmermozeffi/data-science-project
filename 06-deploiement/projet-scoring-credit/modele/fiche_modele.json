@@ -1,0 +1,129 @@
+{
+  "version": "1.0.0",
+  "date_entrainement": "2026-11-10",
+  "scikit_learn": "1.9.1",
+  "donnees": {
+    "fichier": "demandes_credit.csv",
+    "lignes": 7000,
+    "taux_accord": 0.6,
+    "entrainement": 4200,
+    "validation": 1400,
+    "test": 1400
+  },
+  "cible": "credit_accorde : décision passée de l'institution (1 = accordé), PAS le remboursement",
+  "variables": {
+    "numeriques": [
+      "age",
+      "revenu_mensuel",
+      "anciennete_emploi",
+      "montant_demande",
+      "duree_pret_mois",
+      "nb_credits_actuels",
+      "apport_personnel",
+      "nb_personnes_charge"
+    ],
+    "categorielles": [
+      "type_contrat",
+      "historique_credit"
+    ],
+    "exclues": [
+      "situation_familiale"
+    ]
+  },
+  "categories": {
+    "type_contrat": [
+      "CDD",
+      "CDI",
+      "Fonctionnaire",
+      "Indépendant"
+    ],
+    "historique_credit": [
+      "Bon",
+      "Mauvais",
+      "Moyen"
+    ]
+  },
+  "bornes": {
+    "age": [
+      21.0,
+      64.0
+    ],
+    "revenu_mensuel": [
+      80000.0,
+      1482000.0
+    ],
+    "anciennete_emploi": [
+      0.0,
+      29.0
+    ],
+    "montant_demande": [
+      420000.0,
+      56460000.0
+    ],
+    "duree_pret_mois": [
+      12.0,
+      120.0
+    ],
+    "nb_credits_actuels": [
+      0.0,
+      6.0
+    ],
+    "apport_personnel": [
+      0.0,
+      17330000.0
+    ],
+    "nb_personnes_charge": [
+      0.0,
+      7.0
+    ]
+  },
+  "seuils": {
+    "bas": 0.24,
+    "haut": 0.78,
+    "regle": "précision des favorables ≥ 97% ; bons dossiers parmi les défavorables ≤ 5% (sur la validation)"
+  },
+  "metriques_test": {
+    "auc": 0.9781,
+    "accuracy_seuil_0_5": 0.9193,
+    "brier": 0.0582,
+    "ecart_calibration_max": 0.1212,
+    "zones": {
+      "Favorable": {
+        "part": 0.5457,
+        "taux_accordes_reels": 0.9555
+      },
+      "À étudier": {
+        "part": 0.1429,
+        "taux_accordes_reels": 0.505
+      },
+      "Défavorable": {
+        "part": 0.3114,
+        "taux_accordes_reels": 0.0206
+      }
+    }
+  },
+  "profil_accorde": {
+    "age": 42.0,
+    "revenu_mensuel": 359000.0,
+    "anciennete_emploi": 16.0,
+    "montant_demande": 5870000.0,
+    "duree_pret_mois": 60.0,
+    "nb_credits_actuels": 1.0,
+    "apport_personnel": 1010000.0,
+    "nb_personnes_charge": 1.0,
+    "type_contrat": "CDI",
+    "historique_credit": "Bon"
+  },
+  "profil_refuse": {
+    "age": 42.0,
+    "revenu_mensuel": 265000.0,
+    "anciennete_emploi": 12.0,
+    "montant_demande": 6745000.0,
+    "duree_pret_mois": 24.0,
+    "nb_credits_actuels": 1.0,
+    "apport_personnel": 1085000.0,
+    "nb_personnes_charge": 1.0,
+    "type_contrat": "CDI",
+    "historique_credit": "Bon"
+  }
+}

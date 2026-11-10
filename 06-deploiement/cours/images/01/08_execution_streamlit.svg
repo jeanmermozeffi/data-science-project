@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 510" width="900" height="510" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+<rect width="900" height="510" rx="14" fill="#fcfcfb"/>
+<defs><marker id="fl" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#52514e"/></marker></defs>
+<text x="450.0" y="34.0" font-size="15" fill="#0b0b0b" text-anchor="middle" font-weight="bold">Le modèle d'exécution de Streamlit</text>
+<text x="450.0" y="54.0" font-size="12" fill="#52514e" text-anchor="middle" font-weight="normal">À CHAQUE interaction, le script entier est réexécuté de haut en bas</text>
+<rect x="40" y="90" width="200" height="80" rx="10" fill="#f3f2ee" stroke="#c3c2b7" stroke-width="2"/>
+<text x="140.0" y="116.0" font-size="14" fill="#0b0b0b" text-anchor="middle" font-weight="bold">👤 L'agent agit</text>
+<text x="140.0" y="136.0" font-size="12" fill="#52514e" text-anchor="middle" font-weight="normal">clique, saisit,</text>
+<text x="140.0" y="153.0" font-size="12" fill="#52514e" text-anchor="middle" font-weight="normal">change d'onglet</text>
+<line x1="242" y1="130" x2="318" y2="130" stroke="#52514e" stroke-width="2" marker-end="url(#fl)"/>
+<text x="280.0" y="122.0" font-size="11" fill="#52514e" text-anchor="middle" font-weight="normal">déclenche</text>
+<rect x="320" y="76" width="260" height="250" rx="10" fill="#ffffff" stroke="#1c5cab" stroke-width="2"/>
+<text x="450.0" y="100.0" font-size="14" fill="#0b0b0b" text-anchor="middle" font-weight="bold">app.py exécuté en entier</text>
+<text x="340.0" y="130.0" font-size="13" fill="#52514e" text-anchor="start" font-weight="normal">import …</text>
+<line x1="560" y1="122" x2="560" y2="140" stroke="#1c5cab" stroke-width="2" marker-end="url(#fl)"/>
+<text x="340.0" y="160.0" font-size="13" fill="#52514e" text-anchor="start" font-weight="normal">modele = charger_modele()</text>
+<line x1="560" y1="152" x2="560" y2="170" stroke="#1c5cab" stroke-width="2" marker-end="url(#fl)"/>
+<text x="340.0" y="190.0" font-size="13" fill="#52514e" text-anchor="start" font-weight="normal">with st.form(…): …</text>
+<line x1="560" y1="182" x2="560" y2="200" stroke="#1c5cab" stroke-width="2" marker-end="url(#fl)"/>
+<text x="340.0" y="220.0" font-size="13" fill="#52514e" text-anchor="start" font-weight="normal">if envoyer: calculer…</text>
+<line x1="560" y1="212" x2="560" y2="230" stroke="#1c5cab" stroke-width="2" marker-end="url(#fl)"/>
+<text x="340.0" y="250.0" font-size="13" fill="#52514e" text-anchor="start" font-weight="normal">afficher l'avis</text>
+<line x1="560" y1="242" x2="560" y2="260" stroke="#1c5cab" stroke-width="2" marker-end="url(#fl)"/>
+<text x="340.0" y="280.0" font-size="13" fill="#52514e" text-anchor="start" font-weight="normal">afficher le journal</text>
+<line x1="560" y1="272" x2="560" y2="290" stroke="#1c5cab" stroke-width="2" marker-end="url(#fl)"/>
+<line x1="582" y1="200" x2="658" y2="200" stroke="#52514e" stroke-width="2" marker-end="url(#fl)"/>
+<text x="620.0" y="192.0" font-size="11" fill="#52514e" text-anchor="middle" font-weight="normal">produit</text>
+<rect x="660" y="160" width="200" height="80" rx="10" fill="#e3f6ee" stroke="#14875e" stroke-width="2"/>
+<text x="760.0" y="186.0" font-size="14" fill="#0b0b0b" text-anchor="middle" font-weight="bold">🖥️ Page affichée</text>
+<text x="760.0" y="206.0" font-size="12" fill="#52514e" text-anchor="middle" font-weight="normal">la nouvelle version</text>
+<text x="760.0" y="223.0" font-size="12" fill="#52514e" text-anchor="middle" font-weight="normal">de l'écran</text>
+<path d="M 760 158 C 760 60, 140 30, 140 88" fill="none" stroke="#52514e" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#fl)"/>
+<text x="450.0" y="68.0" font-size="1" fill="#0b0b0b" text-anchor="middle" font-weight="normal"></text>
+<text x="450.0" y="362.0" font-size="14" fill="#0b0b0b" text-anchor="middle" font-weight="bold">Ce qui SURVIT d'une exécution à l'autre</text>
+<rect x="70" y="380" width="240" height="86" rx="10" fill="#fde7dc" stroke="#d4581f" stroke-width="2"/>
+<text x="190.0" y="406.0" font-size="14" fill="#0b0b0b" text-anchor="middle" font-weight="bold">st.session_state</text>
+<text x="190.0" y="426.0" font-size="12" fill="#52514e" text-anchor="middle" font-weight="normal">mémoire propre à CHAQUE</text>
+<text x="190.0" y="443.0" font-size="12" fill="#52514e" text-anchor="middle" font-weight="normal">utilisateur (journal, dossier)</text>
+<rect x="330" y="380" width="240" height="86" rx="10" fill="#fde7dc" stroke="#d4581f" stroke-width="2"/>
+<text x="450.0" y="406.0" font-size="14" fill="#0b0b0b" text-anchor="middle" font-weight="bold">@st.cache_resource</text>
+<text x="450.0" y="426.0" font-size="12" fill="#52514e" text-anchor="middle" font-weight="normal">objet chargé UNE fois et</text>
+<text x="450.0" y="443.0" font-size="12" fill="#52514e" text-anchor="middle" font-weight="normal">partagé (le modèle)</text>
+<rect x="590" y="380" width="240" height="86" rx="10" fill="#fde7dc" stroke="#d4581f" stroke-width="2"/>
+<text x="710.0" y="406.0" font-size="14" fill="#0b0b0b" text-anchor="middle" font-weight="bold">@st.cache_data</text>
+<text x="710.0" y="426.0" font-size="12" fill="#52514e" text-anchor="middle" font-weight="normal">résultat mis en cache</text>
+<text x="710.0" y="443.0" font-size="12" fill="#52514e" text-anchor="middle" font-weight="normal">(un fichier, une requête)</text>
+<text x="450.0" y="492.0" font-size="12" fill="#898781" text-anchor="middle" font-weight="normal" font-style="italic">Tout le reste (variables ordinaires) est recalculé à chaque exécution.</text>
+</svg>

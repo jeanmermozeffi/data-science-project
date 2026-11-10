@@ -29,8 +29,14 @@ Repo instructeur — le repo apprenant est [data-scientist-bootcamp-2026-05](htt
 05-deep-learning/
 ├── cours/                # 01 Fondamentaux IA/ML/DL · 02 Checkpoint 9 Réseau de neurones
 │   │                     # 03 Forward & Backward Propagation · 04 Concevoir et entraîner des CNN
-│   └── images/           # Illustrations des cours 03 et 04
+│   │                     # 05 Feature Extraction vs Fine-Tuning (NumPy, sans TensorFlow)
+│   └── images/           # Illustrations des cours 03, 04 et 05
 └── notebooks/            # Notebooks interactifs (TensorFlow/Keras pour le 04 ; Colab + GPU conseillé)
+
+06-deploiement/
+├── cours/                # 01 Model Serving with Streamlit (cas d'usage complet : scoring de crédit, de A à Z)
+│   └── images/           # Captures de l'application et schémas du cours 01
+└── projet-scoring-credit/  # Application Streamlit du cours 01 : modèle, logique métier, interface, 16 tests
 
 data/                     # Jeux de données partagés (CSV)
 checkpoint/               # Corrections des checkpoints
