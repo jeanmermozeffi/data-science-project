@@ -1,0 +1,10 @@
+# Configuration de l'application (lue au démarrage de « streamlit run »)
+[theme]
+base = "light"               # thème clair, quel que soit le réglage du navigateur
+primaryColor = "#1c5cab"     # couleur des boutons principaux
+
+[client]
+toolbarMode = "minimal"      # masque le menu développeur (bouton « Deploy ») pour les utilisateurs métier
+
+[browser]
+gatherUsageStats = false     # pas d'envoi de statistiques d'usage à Streamlit

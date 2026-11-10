@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 460" width="860" height="460" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+<rect width="860" height="460" rx="14" fill="#fcfcfb"/>
+<defs><marker id="fl" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#52514e"/></marker></defs>
+<text x="210.0" y="36.0" font-size="16" fill="#0b0b0b" text-anchor="middle" font-weight="bold">Feature extraction</text>
+<text x="210.0" y="56.0" font-size="12" fill="#52514e" text-anchor="middle" font-weight="normal">on se sert du réseau comme d'un extracteur</text>
+<rect x="90" y="76" width="240" height="50" rx="8" fill="#e8eef6" stroke="#7b93b3" stroke-width="2"/>
+<text x="210.0" y="101.0" font-size="13" fill="#0b0b0b" text-anchor="middle" font-weight="bold">Couche 1</text>
+<text x="210.0" y="118.0" font-size="11" fill="#52514e" text-anchor="middle" font-weight="normal">❄ figée</text>
+<rect x="90" y="138" width="240" height="50" rx="8" fill="#e8eef6" stroke="#7b93b3" stroke-width="2"/>
+<text x="210.0" y="163.0" font-size="13" fill="#0b0b0b" text-anchor="middle" font-weight="bold">Couche 2</text>
+<text x="210.0" y="180.0" font-size="11" fill="#52514e" text-anchor="middle" font-weight="normal">❄ figée</text>
+<rect x="90" y="200" width="240" height="50" rx="8" fill="#e8eef6" stroke="#7b93b3" stroke-width="2"/>
+<text x="210.0" y="225.0" font-size="13" fill="#0b0b0b" text-anchor="middle" font-weight="bold">Couche 3</text>
+<text x="210.0" y="242.0" font-size="11" fill="#52514e" text-anchor="middle" font-weight="normal">❄ figée</text>
+<rect x="90" y="262" width="240" height="50" rx="8" fill="#e3f6ee" stroke="#14875e" stroke-width="2"/>
+<text x="210.0" y="287.0" font-size="13" fill="#0b0b0b" text-anchor="middle" font-weight="bold">Tête neuve</text>
+<text x="210.0" y="304.0" font-size="11" fill="#52514e" text-anchor="middle" font-weight="normal">🔥 seule à apprendre</text>
+<text x="210.0" y="352.0" font-size="12" fill="#52514e" text-anchor="middle" font-weight="normal">Peu de paramètres entraînés (≈ 3 % ici)</text>
+<text x="210.0" y="371.0" font-size="12" fill="#52514e" text-anchor="middle" font-weight="normal">Rapide, peu de risque de surapprentissage</text>
+<text x="210.0" y="390.0" font-size="12" fill="#52514e" text-anchor="middle" font-weight="normal">Limite : les features ne s'adaptent pas</text>
+<line x1="430" y1="26" x2="430" y2="410" stroke="#e1e0d9" stroke-width="2"/>
+<text x="630.0" y="36.0" font-size="16" fill="#0b0b0b" text-anchor="middle" font-weight="bold">Fine-tuning</text>
+<text x="630.0" y="56.0" font-size="12" fill="#52514e" text-anchor="middle" font-weight="normal">on réajuste aussi les features à la cible</text>
+<rect x="510" y="76" width="240" height="50" rx="8" fill="#fde7dc" stroke="#d4581f" stroke-width="2"/>
+<text x="630.0" y="101.0" font-size="13" fill="#0b0b0b" text-anchor="middle" font-weight="bold">Couche 1</text>
+<text x="630.0" y="118.0" font-size="11" fill="#52514e" text-anchor="middle" font-weight="normal">🔥 lr petit (ou figée)</text>
+<rect x="510" y="138" width="240" height="50" rx="8" fill="#fde7dc" stroke="#d4581f" stroke-width="2"/>
+<text x="630.0" y="163.0" font-size="13" fill="#0b0b0b" text-anchor="middle" font-weight="bold">Couche 2</text>
+<text x="630.0" y="180.0" font-size="11" fill="#52514e" text-anchor="middle" font-weight="normal">🔥 lr petit</text>
+<rect x="510" y="200" width="240" height="50" rx="8" fill="#fde7dc" stroke="#d4581f" stroke-width="2"/>
+<text x="630.0" y="225.0" font-size="13" fill="#0b0b0b" text-anchor="middle" font-weight="bold">Couche 3</text>
+<text x="630.0" y="242.0" font-size="11" fill="#52514e" text-anchor="middle" font-weight="normal">🔥 lr petit</text>
+<rect x="510" y="262" width="240" height="50" rx="8" fill="#e3f6ee" stroke="#14875e" stroke-width="2"/>
+<text x="630.0" y="287.0" font-size="13" fill="#0b0b0b" text-anchor="middle" font-weight="bold">Tête neuve</text>
+<text x="630.0" y="304.0" font-size="11" fill="#52514e" text-anchor="middle" font-weight="normal">🔥 lr normal</text>
+<text x="630.0" y="352.0" font-size="12" fill="#52514e" text-anchor="middle" font-weight="normal">Étape 1 : entraîner la tête seule (corps figé)</text>
+<text x="630.0" y="371.0" font-size="12" fill="#52514e" text-anchor="middle" font-weight="normal">Étape 2 : dégeler, learning rate ÷ 10</text>
+<text x="630.0" y="390.0" font-size="12" fill="#52514e" text-anchor="middle" font-weight="normal">Plus précis si assez de données, plus coûteux</text>
+<rect x="150" y="424" width="16" height="16" rx="4" fill="#e8eef6" stroke="#7b93b3" stroke-width="1.5"/>
+<text x="174.0" y="437.0" font-size="12" fill="#52514e" text-anchor="start" font-weight="normal">❄ gelée : poids figés</text>
+<rect x="340" y="424" width="16" height="16" rx="4" fill="#fde7dc" stroke="#d4581f" stroke-width="1.5"/>
+<text x="364.0" y="437.0" font-size="12" fill="#52514e" text-anchor="start" font-weight="normal">🔥 entraînée</text>
+<rect x="530" y="424" width="16" height="16" rx="4" fill="#e3f6ee" stroke="#14875e" stroke-width="1.5"/>
+<text x="554.0" y="437.0" font-size="12" fill="#52514e" text-anchor="start" font-weight="normal">✚ couche neuve</text>
+</svg>

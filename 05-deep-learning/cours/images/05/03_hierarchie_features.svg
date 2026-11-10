@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 855 278" width="855" height="278" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+<rect width="855" height="278" rx="14" fill="#fcfcfb"/>
+<defs><marker id="fl" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#52514e"/></marker></defs>
+<rect x="30" y="60" width="180" height="74" rx="8" fill="#ffffff" stroke="#c3c2b7" stroke-width="1.5"/>
+<text x="120.0" y="90.0" font-size="14" fill="#0b0b0b" text-anchor="middle" font-weight="bold">Couches basses</text>
+<text x="120.0" y="110.0" font-size="12" fill="#52514e" text-anchor="middle" font-weight="normal">contours, couleurs</text>
+<text x="120.0" y="152.0" font-size="12" fill="#898781" text-anchor="middle" font-weight="normal" font-style="italic">très générique</text>
+<line x1="212" y1="97" x2="233" y2="97" stroke="#52514e" stroke-width="2" marker-end="url(#fl)"/>
+<rect x="235" y="60" width="180" height="74" rx="8" fill="#ffffff" stroke="#c3c2b7" stroke-width="1.5"/>
+<text x="325.0" y="90.0" font-size="14" fill="#0b0b0b" text-anchor="middle" font-weight="bold">Intermédiaires</text>
+<text x="325.0" y="110.0" font-size="12" fill="#52514e" text-anchor="middle" font-weight="normal">textures, motifs</text>
+<text x="325.0" y="152.0" font-size="12" fill="#898781" text-anchor="middle" font-weight="normal" font-style="italic">générique</text>
+<line x1="417" y1="97" x2="438" y2="97" stroke="#52514e" stroke-width="2" marker-end="url(#fl)"/>
+<rect x="440" y="60" width="180" height="74" rx="8" fill="#ffffff" stroke="#c3c2b7" stroke-width="1.5"/>
+<text x="530.0" y="90.0" font-size="14" fill="#0b0b0b" text-anchor="middle" font-weight="bold">Couches hautes</text>
+<text x="530.0" y="110.0" font-size="12" fill="#52514e" text-anchor="middle" font-weight="normal">parties d'objets</text>
+<text x="530.0" y="152.0" font-size="12" fill="#898781" text-anchor="middle" font-weight="normal" font-style="italic">spécifique</text>
+<line x1="622" y1="97" x2="643" y2="97" stroke="#52514e" stroke-width="2" marker-end="url(#fl)"/>
+<rect x="645" y="60" width="180" height="74" rx="8" fill="#ffffff" stroke="#c3c2b7" stroke-width="1.5"/>
+<text x="735.0" y="90.0" font-size="14" fill="#0b0b0b" text-anchor="middle" font-weight="bold">Tête</text>
+<text x="735.0" y="110.0" font-size="12" fill="#52514e" text-anchor="middle" font-weight="normal">classes de la source</text>
+<text x="735.0" y="152.0" font-size="12" fill="#898781" text-anchor="middle" font-weight="normal" font-style="italic">très spécifique</text>
+<text x="430.0" y="34.0" font-size="15" fill="#0b0b0b" text-anchor="middle" font-weight="bold">Ce que les couches apprennent, de l'entrée vers la sortie</text>
+<defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#7b93b3"/><stop offset="1" stop-color="#d4581f"/></linearGradient></defs>
+<rect x="30" y="172" width="795" height="10" rx="5" fill="url(#g)"/>
+<text x="30.0" y="202.0" font-size="12" fill="#52514e" text-anchor="start" font-weight="normal">transférable à presque toute tâche</text>
+<text x="825.0" y="202.0" font-size="12" fill="#52514e" text-anchor="end" font-weight="normal">propre à la tâche source</text>
+<line x1="645" y1="52" x2="645" y2="186" stroke="#0b0b0b" stroke-width="2" stroke-dasharray="5 4"/>
+<text x="645.0" y="238.0" font-size="12" fill="#0b0b0b" text-anchor="middle" font-weight="bold">✂ cible proche de la source : couper ici</text>
+<line x1="440" y1="52" x2="440" y2="186" stroke="#0b0b0b" stroke-width="2" stroke-dasharray="5 4"/>
+<text x="440.0" y="260.0" font-size="12" fill="#0b0b0b" text-anchor="middle" font-weight="bold">✂ cible éloignée : couper plus bas</text>
+</svg>
