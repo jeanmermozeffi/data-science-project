@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+<rect width="800" height="420" rx="14" fill="#fcfcfb"/>
+<defs><marker id="fl" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#52514e"/></marker></defs>
+<rect x="170" y="60" width="300" height="140" rx="8" fill="#fff4ea" stroke="#e3a37f" stroke-width="2"/>
+<text x="320.0" y="112.0" font-size="16" fill="#0b0b0b" text-anchor="middle" font-weight="bold">Fine-tuning profond</text>
+<text x="320.0" y="136.0" font-size="13" fill="#52514e" text-anchor="middle" font-weight="normal">ou from scratch</text>
+<text x="320.0" y="172.0" font-size="11" fill="#898781" text-anchor="middle" font-weight="normal" font-style="italic">beaucoup de données, cible éloignée</text>
+<rect x="480" y="60" width="300" height="140" rx="8" fill="#fde7dc" stroke="#d4581f" stroke-width="2"/>
+<text x="630.0" y="112.0" font-size="16" fill="#0b0b0b" text-anchor="middle" font-weight="bold">Fine-tuning complet</text>
+<text x="630.0" y="136.0" font-size="13" fill="#52514e" text-anchor="middle" font-weight="normal">le meilleur résultat</text>
+<text x="630.0" y="172.0" font-size="11" fill="#898781" text-anchor="middle" font-weight="normal" font-style="italic">beaucoup de données, cible proche</text>
+<rect x="170" y="210" width="300" height="140" rx="8" fill="#f3f2ee" stroke="#c3c2b7" stroke-width="2"/>
+<text x="320.0" y="262.0" font-size="16" fill="#0b0b0b" text-anchor="middle" font-weight="bold">Prudence</text>
+<text x="320.0" y="286.0" font-size="13" fill="#52514e" text-anchor="middle" font-weight="normal">couper bas, augmenter les données</text>
+<text x="320.0" y="322.0" font-size="11" fill="#898781" text-anchor="middle" font-weight="normal" font-style="italic">peu de données, cible éloignée</text>
+<rect x="480" y="210" width="300" height="140" rx="8" fill="#e3f6ee" stroke="#14875e" stroke-width="2"/>
+<text x="630.0" y="262.0" font-size="16" fill="#0b0b0b" text-anchor="middle" font-weight="bold">Feature extraction</text>
+<text x="630.0" y="286.0" font-size="13" fill="#52514e" text-anchor="middle" font-weight="normal">rapide et sûr</text>
+<text x="630.0" y="322.0" font-size="11" fill="#898781" text-anchor="middle" font-weight="normal" font-style="italic">peu de données, cible proche</text>
+<text x="475.0" y="36.0" font-size="15" fill="#0b0b0b" text-anchor="middle" font-weight="bold">Que faire selon votre situation ?</text>
+<text x="320.0" y="384.0" font-size="12" fill="#52514e" text-anchor="middle" font-weight="normal">cible éloignée de la source</text>
+<text x="630.0" y="384.0" font-size="12" fill="#52514e" text-anchor="middle" font-weight="normal">cible proche de la source</text>
+<line x1="170" y1="398" x2="780" y2="398" stroke="#898781" stroke-width="2" marker-end="url(#fl)"/>
+<text x="475.0" y="418.0" font-size="12" fill="#0b0b0b" text-anchor="middle" font-weight="bold">similarité source ↔ cible</text>
+<text x="150.0" y="134.0" font-size="12" fill="#52514e" text-anchor="end" font-weight="normal">beaucoup</text>
+<text x="150.0" y="150.0" font-size="12" fill="#52514e" text-anchor="end" font-weight="normal">de données</text>
+<text x="150.0" y="284.0" font-size="12" fill="#52514e" text-anchor="end" font-weight="normal">peu</text>
+<text x="150.0" y="300.0" font-size="12" fill="#52514e" text-anchor="end" font-weight="normal">de données</text>
+<text x="40" y="205" font-size="12" fill="#0b0b0b" font-weight="bold" text-anchor="middle" transform="rotate(-90 40 205)">données cibles étiquetées</text>
+</svg>
